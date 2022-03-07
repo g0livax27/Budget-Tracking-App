@@ -58,15 +58,24 @@ app.post('/bills/', (req, res) => {
     req.body.billPaid = req.body.billPaid === 'on' ? true : false;
     Bills.create(req.body)
         .then((createdBill) => {
-            res.redirect(`/bills/${createdBill._id}`)
+            res.redirect(`/bills/${createdBill._id}`);
         })
         .catch((err) => {
-            res.status(400).json({ err })
+            res.status(400).json({ err });
         })
 });
 
 // Edit Route \\
-
+app.get('/bills/:id/edit', (req, res) => {
+    const { id } = req.params;
+    Bills.findById(id)
+        .then((bills) => {
+            res.render('bills/Edit', { bills });
+        })
+        .catch((err) => {
+            res.status(400.).json({ err });
+        })
+});
 
 // Show Route \\
 app.get('/bills/:id', (req, res) => {
@@ -76,7 +85,7 @@ app.get('/bills/:id', (req, res) => {
             res.render('bills/Show', { bill });
         })
         .catch((err) => {
-            res.status(400).json({ err })
+            res.status(400).json({ err });
         })
 });
 
