@@ -45,7 +45,9 @@ app.get('/bills', (req, res) => {
 });
 
 // New Route \\
-
+app.get('/bills/new', (req, res) => {
+    res.render('bills/New')
+});
 
 // Delete Route \\
 

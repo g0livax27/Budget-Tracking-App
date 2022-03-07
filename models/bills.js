@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 
 const billSchema = new mongoose.Schema(
     {
+    month: String,
     billAmount: String,
     billName: String,
     billPaid: Boolean

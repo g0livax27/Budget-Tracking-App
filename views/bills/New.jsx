@@ -1,20 +1,22 @@
 const React = require('react');
+const Default = require('../layout/Default.jsx');
 
 class New extends React.Component {
     render() {
         return(
-        <div>
-            <h1>Welcome! This is the New Page</h1>
+        <Default>
+            <h1>Enter a New Expense to Track Below:</h1>
             <nav>
-                <a href="/bills">Go Back to the Bills Index Page</a>
+                <a href="/bills">Back to Monthly Tracker</a>
             </nav>
             <form action="/bills" method="POST">
+                Month: <input name="month" type="text"/><br/>
                 Bill Amount: <input name="billAmount" type="text"/><br/>
                 Name of Bill: <input name="billName" type="text"/><br/>
                 Bill Paid?: <input name="billPaid" type="checkbox"/><br/>
                 <input type="submit" value="Enter Expense"/>
             </form>
-        </div>    
+        </Default>    
         )
     }
 }
