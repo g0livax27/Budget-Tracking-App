@@ -62,7 +62,17 @@ app.get('/bills/new', (req, res) => {
 
 
 // Show Route \\
-
+app.get('/bills/:id', (req, res) => {
+    Bills.findById(req.params.id, (err, foundBill) => {
+        if(err){
+            res.status(400).send(err)
+        } else {
+            res.render('Show', {
+                bill: foundBill
+            })
+        }
+    })
+});
 
 app.listen(PORT, () => {
     console.log('eavesdropping on 3000')
