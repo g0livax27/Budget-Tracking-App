@@ -28,7 +28,7 @@ class Edit extends React.Component {
                         </label>
                     </fieldset>
                     <input type="submit" value={`Edit ${bills.billName}`} /> <br/>
-                    <a href="/bills/"><button>Back to Main</button></a>
+                    <a href="/bills"><button>Back to Main</button></a>
                 </form>
             </Default>
         )

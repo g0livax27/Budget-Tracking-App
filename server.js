@@ -38,7 +38,7 @@ app.get('/bills', (req, res) => {
             res.render('bills/Index', { bills });
         })
         .catch((err) => {
-            res.status(400).json({ err })
+            res.status(400).json({ err });
         })
 });
 
@@ -51,7 +51,17 @@ app.get('/bills/new', (req, res) => {
 
 
 // Update Route \\
-
+app.put('/bills/:id', (req, res) => {
+    const { id } = req.params;
+    req.body.billPaid = req.body.billPaid === 'on' ? true : false;
+    Bills.findByIdAndUpdate(id, req.body, { new: true })
+        .then((updatedBill) => {
+            res.redirect(`/bills/${updatedBill._id}`);
+        })
+        .catch((err) => {
+            res.status(400).json({ err });
+        })
+});
 
 // Create Route \\
 app.post('/bills/', (req, res) => {
