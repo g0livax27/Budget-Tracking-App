@@ -15,9 +15,10 @@ class Index extends React.Component {
                         bills.map((bill) => { 
                             return(
                                 <li>
-                                    <a href={`/bills/${bill._id}`}>{bill.billName}</a>
+                                    {bill.month}<br/>
+                                    <a href={`/bills/${bill._id}`}>View Expenses for this Month</a>
                                     <form action={`/bills/${bill._id}?_method=DELETE`} method="POST">
-                                        <input type="submit" value={`Delete Entry`}/>
+                                        <input type="submit" value={`Delete Month's Expenses`}/>
                                     </form>
                                 </li>
                             )

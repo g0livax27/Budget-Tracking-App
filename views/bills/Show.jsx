@@ -4,14 +4,16 @@ const Default = require('../layout/Default.jsx');
 
 class Show extends React.Component {
     render() {
-        const bill = this.props.bill;
+        const { bill } = this.props;
         return(
             <Default>
                 <h1>{bill.month}'s Expenses</h1>
                 <a href="/bills">Back</a><br/><br/>
                 <div>
-                    <p>Monthly Expense:<br/>{bill.billName}</p>
-                    <p>Bill Paid:<br/>{bill.billPaid ? 'Need to Pay' : 'Paid in Full'}</p>
+                    <p>Expenses:</p>
+                    <p>{bill.billName}</p>
+                    <li>{bill.billAmount}</li>
+                    <p>Bill Paid?<br/>{bill.billPaid ? 'Paid in Full' : 'No, Still Need to Pay'}</p>
                 </div>
                 <a href={`/bills/${bill._id}/edit`}>Edit this Expense</a>
              </Default>

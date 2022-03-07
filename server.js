@@ -33,15 +33,13 @@ app.use(express.static('public'));
 
 // Index Route \\
 app.get('/bills', (req, res) => {
-    Bills.find({}, (err, foundBills) => {
-        if(err) {
-            res.status(400).send(err)
-        } else {
-            res.render('bills/Index', {
-                bills: foundBills
-            })
-        }
-    })
+    Bills.find({})
+        .then((bills) => {
+            res.render('bills/Index', { bills });
+        })
+        .catch((err) => {
+            res.status(400).json({ err })
+        })
 });
 
 // New Route \\
@@ -56,22 +54,30 @@ app.get('/bills/new', (req, res) => {
 
 
 // Create Route \\
-
+app.post('/bills/', (req, res) => {
+    req.body.billPaid = req.body.billPaid === 'on' ? true : false;
+    Bills.create(req.body)
+        .then((createdBill) => {
+            res.redirect(`/bills/${createdBill._id}`)
+        })
+        .catch((err) => {
+            res.status(400).json({ err })
+        })
+});
 
 // Edit Route \\
 
 
 // Show Route \\
 app.get('/bills/:id', (req, res) => {
-    Bills.findById(req.params.id, (err, foundBill) => {
-        if(err){
-            res.status(400).send(err)
-        } else {
-            res.render('Show', {
-                bill: foundBill
-            })
-        }
-    })
+    const { id } = req.params;
+    Bills.findById(id)
+        .then((bill) => {
+            res.render('bills/Show', { bill });
+        })
+        .catch((err) => {
+            res.status(400).json({ err })
+        })
 });
 
 app.listen(PORT, () => {
