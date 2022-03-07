@@ -48,7 +48,16 @@ app.get('/bills/new', (req, res) => {
 });
 
 // Delete Route \\
-
+app.delete('/bills/:id', (req, res) => {
+    const { id } = req.params;
+    Bills.findByIdAndDelete(id)
+        .then(() => {
+            res.redirect('/bills');
+        })
+        .catch((err) => {
+            res.status(400).json({ err });
+        })
+});
 
 // Update Route \\
 app.put('/bills/:id', (req, res) => {
