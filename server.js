@@ -5,6 +5,7 @@ const morgan = require("morgan");
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
 const PORT = 3000;
+const Bills = require('./models/bills');
 
 // Database Connection \\
 const DATABASE_URL = process.env.DATABASE_URL;
@@ -19,7 +20,7 @@ mongoose.connect(DATABASE_URL, CONFIG);
 // Express App Object \\
 const app = express();
 app.engine('jsx', require('express-react-views').createEngine());
-app.set('vew engine', 'jsx');
+app.set('view engine', 'jsx');
 
 // Middleware \\
 app.use(morgan("tiny"));
@@ -32,7 +33,15 @@ app.use(express.static('public'));
 
 // Index Route \\
 app.get('/bills', (req, res) => {
-    res.render('bills/Index')
+    Bills.find({}, (err, foundBills) => {
+        if(err) {
+            res.status(400).send(err)
+        } else {
+            res.render('bills/Index', {
+                bills: foundBills
+            })
+        }
+    })
 });
 
 // New Route \\

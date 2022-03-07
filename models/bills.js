@@ -1,14 +1,14 @@
 // Model Code \\
 const mongoose = require('mongoose');
 
-const billSchema = new mongoose.Schema({
-    amount: String,
+const billSchema = new mongoose.Schema(
+    {
+    billAmount: String,
     billName: String,
     billPaid: Boolean
-});
+    }
+);
 
-const Bill = mongoose.model('Bill', billSchema);
+const Bills = mongoose.model('Bills', billSchema);
 
-
-
-module.exports = Bill;
+module.exports = Bills;
