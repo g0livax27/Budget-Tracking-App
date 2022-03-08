@@ -9,7 +9,6 @@ class Show extends React.Component {
             <Default>
                 <h1>{bill.month}'s Expenses</h1>
                 <a href="/bills">Back</a><br/><br/>
-                <a href="/bills/:month/new">Add Expense to this Month</a><br/>
                 <div>
                     <p>Expenses:</p>
                     <p>{bill.billName}</p>

@@ -33,9 +33,10 @@ app.use(express.static('public'));
 
 // Index Route \\
 app.get('/bills', (req, res) => {
-    Bills.find({})
-        .then((bills) => {
-            res.render('bills/Index', { bills });
+    const { months } = req.params;
+    Bills.find({ months })
+        .then((months) => {
+            res.render('bills/Index', { months });
         })
         .catch((err) => {
             res.status(400).json({ err });
@@ -89,7 +90,7 @@ app.post('/bills/', (req, res) => {
 });
 
 // Edit Route \\
-app.get('/bills/expense/:id/edit', (req, res) => {
+app.get('/bills/:id/edit', (req, res) => {
     const { id } = req.params;
     Bills.findById(id)
         .then((bills) => {
@@ -114,9 +115,10 @@ app.get('/bills/expense/:id', (req, res) => {
 
 app.get('/bills/:month', (req, res) => {
     const { month } = req.params;
-    Bills.find({ month })
+    Bills.find({ month: month })
         .then((bills) => {
-            res.render('bills/Month', { bills });
+            console.log(bills)
+            res.render('bills/Month', { bills, month });
         })
         .catch((err) => {
             res.status(400).json({ err });

@@ -27,7 +27,7 @@ class Edit extends React.Component {
                             Is Bill Paid?:{ this.props.bills.billPaid? <input type="checkbox" name="billPaid" defaultChecked />: <input type="checkbox" name="billPaid"/> }
                         </label>
                     </fieldset>
-                    <input type="submit" value={`Edit ${bills.billName} Bill`} /> <br/>
+                    <input type="submit" value={`Edit ${bills.billName} Bill`}/><br/>
                     <a href="/bills">Back to Main</a>
                 </form>
             </Default>
