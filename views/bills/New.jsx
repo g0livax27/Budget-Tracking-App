@@ -11,9 +11,9 @@ class New extends React.Component {
             </nav>
             <form action="/bills" method="POST">
                 Month: <input name="month" type="text"/><br/>
-                Bill Amount: <input name="billAmount" type="text"/><br/>
-                Name of Bill: <input name="billName" type="text"/><br/>
-                Bill Paid?: <input name="billPaid" type="checkbox"/><br/>
+                Name of Bill: <input name="billName" type="text"/>
+                Bill Amount: <input name="billAmount" type="text"/>
+                Is Bill Paid?: <input name="billPaid" type="checkbox"/><br/>
                 <input type="submit" value="Enter Expense"/>
             </form>
         </Default>    

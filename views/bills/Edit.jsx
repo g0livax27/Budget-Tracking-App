@@ -6,29 +6,29 @@ class Edit extends React.Component {
         const { bills } = this.props;
         return(
             <Default>
-                <form action={`/bills/${bills._id}?_method=PUT`} method="post">
+                <form action={`/bills/${bills._id}?_method=PUT`} method="POST">
                     <fieldset>
-                        <legend>Edit {bills.billName}</legend>
+                        <legend>Edit Bill</legend>
                         <label>
                             Bill Name:<input
                             type="text"
                             name="billName"
                             placeholder="enter bill name"
                                 defaultValue={bills.billName}/>
-                        </label>
+                        </label><br/>
                         <label>
                             Bill Amount:<input
                             type="text"
                             name="billAmount"
                             placeholder="enter bill amount"
                                 defaultValue={bills.billAmount}/>
-                        </label>
+                        </label><br/>
                         <label>
-                            Bill Paid?:{ this.props.bills.billPaid? <input type="checkbox" name="billName" defaultChecked />: <input type="checkbox" name="billName"/> }
+                            Is Bill Paid?:{ this.props.bills.billPaid? <input type="checkbox" name="billPaid" defaultChecked />: <input type="checkbox" name="billPaid"/> }
                         </label>
                     </fieldset>
-                    <input type="submit" value={`Edit ${bills.billName}`} /> <br/>
-                    <a href="/bills"><button>Back to Main</button></a>
+                    <input type="submit" value={`Edit ${bills.billName} Bill`} /> <br/>
+                    <a href="/bills">Back to Main</a>
                 </form>
             </Default>
         )

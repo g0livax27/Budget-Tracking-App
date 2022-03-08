@@ -47,6 +47,10 @@ app.get('/bills/new', (req, res) => {
     res.render('bills/New')
 });
 
+app.get('bills/:month/new', (req, res) => {
+    res.render('bills/Month')
+});
+
 // Delete Route \\
 app.delete('/bills/:id', (req, res) => {
     const { id } = req.params;
@@ -77,7 +81,7 @@ app.post('/bills/', (req, res) => {
     req.body.billPaid = req.body.billPaid === 'on' ? true : false;
     Bills.create(req.body)
         .then((createdBill) => {
-            res.redirect(`/bills/${createdBill._id}`);
+            res.redirect(`/bills/${createdBill.month}`);
         })
         .catch((err) => {
             res.status(400).json({ err });
@@ -85,7 +89,7 @@ app.post('/bills/', (req, res) => {
 });
 
 // Edit Route \\
-app.get('/bills/:id/edit', (req, res) => {
+app.get('/bills/expense/:id/edit', (req, res) => {
     const { id } = req.params;
     Bills.findById(id)
         .then((bills) => {
@@ -96,10 +100,10 @@ app.get('/bills/:id/edit', (req, res) => {
         })
 });
 
-// Show Route \\
-app.get('/bills/:id', (req, res) => {
+// Show Routes \\
+app.get('/bills/expense/:id', (req, res) => {
     const { id } = req.params;
-    Bills.findById(id)
+    Bills.findById({ id })
         .then((bill) => {
             res.render('bills/Show', { bill });
         })
@@ -107,6 +111,18 @@ app.get('/bills/:id', (req, res) => {
             res.status(400).json({ err });
         })
 });
+
+app.get('/bills/:month', (req, res) => {
+    const { month } = req.params;
+    Bills.find({ month })
+        .then((bills) => {
+            res.render('bills/Month', { bills });
+        })
+        .catch((err) => {
+            res.status(400).json({ err });
+        })
+});
+
 
 app.listen(PORT, () => {
     console.log('eavesdropping on 3000')
