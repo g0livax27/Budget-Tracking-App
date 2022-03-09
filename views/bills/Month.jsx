@@ -10,22 +10,24 @@ class Month extends React.Component {
                 <h1>{month}'s Expenses</h1>
                 <a href="/bills">Back</a><br/><br/>
                 <a href="/bills/new">Add a Bill to this Month</a><br/>
-                <p>Bills:</p>
+                <h2>Bills:</h2>
                 {
                     bills.map((month) =>{
+                        console.log(month);
                         return(
                             <div>
                                 <ol>
-                                    {month.billName}
+                                    <h3>{month.billName}</h3>
                                 </ol>
                                 <li>
                                     {month.billAmount}
                                 </li>
-                                <p>Is Bill Paid? {month.billPaid ? 'Paid in Full' : 'No, Still Need to Pay'}</p>
-                                <a href={`/bills/${month}/edit`}>Edit this Expense</a>
-                                <form action={`/bills/${month}?_method=DELETE`} method="POST">
+                                <h4>Is Bill Paid? {month.billPaid ? 'Paid in Full' : 'No, Still Need to Pay'}</h4>
+                                <a href={`/bills/${month._id}/edit`}>Edit this Expense</a>
+                                <form action={`/bills/${month._id}?_method=DELETE`} method="POST">
                                     <input type="submit" value={`Delete this Expense`}/>
                                 </form>
+                                <hr/>
                             </div>
                         )
                     })

@@ -6,6 +6,7 @@ const methodOverride = require('method-override');
 const mongoose = require('mongoose');
 const PORT = 3000;
 const Bills = require('./models/bills');
+const Wishlist = require('./models/wishlist');
 
 // Database Connection \\
 const DATABASE_URL = process.env.DATABASE_URL;
@@ -43,6 +44,17 @@ app.get('/bills', (req, res) => {
         })
 });
 
+app.get('/wishlist', (req, res) => {
+    const { months } = req.params;
+    Wishlist.find({ months })
+        .then((months) => {
+            res.render('wishlist/Index', { months });
+        })
+        .catch((err) => {
+            res.status(400).json({ err });
+        })
+});
+
 // New Route \\
 app.get('/bills/new', (req, res) => {
     res.render('bills/New')
@@ -70,7 +82,7 @@ app.put('/bills/:id', (req, res) => {
     req.body.billPaid = req.body.billPaid === 'on' ? true : false;
     Bills.findByIdAndUpdate(id, req.body, { new: true })
         .then((updatedBill) => {
-            res.redirect(`/bills/${updatedBill._id}`);
+            res.redirect(`/bills/${updatedBill.month}`);
         })
         .catch((err) => {
             res.status(400).json({ err });
