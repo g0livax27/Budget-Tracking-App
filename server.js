@@ -4,7 +4,6 @@ const express = require('express');
 const morgan = require("morgan");
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
-const PORT = 3000;
 const Bills = require('./models/bills');
 const Wishlist = require('./models/wishlist');
 
@@ -31,6 +30,16 @@ app.use((req, res, next) => {
 });
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
+
+// Server Listener \\
+const PORT = process.env.PORT;
+app.listen(PORT, () => {
+    console.log(`eavesdropping on Port ${PORT}`)
+});
+
+app.get('/', (req, res) => {
+    res.render('Index')
+});
 
 // Index Routes \\
 app.get('/bills', (req, res) => {
@@ -221,9 +230,4 @@ app.get('/wishlist/:month', (req, res) => {
         .catch((err) => {
             res.status(400).json({ err });
         })
-});
-
-
-app.listen(PORT, () => {
-    console.log('eavesdropping on 3000')
 });
