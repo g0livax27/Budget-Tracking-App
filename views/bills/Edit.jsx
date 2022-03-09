@@ -8,7 +8,7 @@ class Edit extends React.Component {
             <Default>
                 <form action={`/bills/${bills._id}?_method=PUT`} method="POST">
                     <fieldset>
-                        <legend>Edit Bill</legend>
+                        <legend>{`Edit ${bills.billName}`}</legend>
                         <label>
                             Bill Name:<input
                             type="text"
@@ -27,7 +27,7 @@ class Edit extends React.Component {
                             Is Bill Paid?:{ this.props.bills.billPaid? <input type="checkbox" name="billPaid" defaultChecked />: <input type="checkbox" name="billPaid"/> }
                         </label>
                     </fieldset>
-                    <input type="submit" value={`Edit ${bills.billName} Bill`}/><br/>
+                    <input type="submit" value="Submit Change"/><br/>
                     <a href="/bills">Back to Main</a>
                 </form>
             </Default>

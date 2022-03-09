@@ -32,7 +32,7 @@ app.use((req, res, next) => {
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
 
-// Index Route \\
+// Index Routes \\
 app.get('/bills', (req, res) => {
     const { months } = req.params;
     Bills.find({ months })
@@ -55,16 +55,27 @@ app.get('/wishlist', (req, res) => {
         })
 });
 
-// New Route \\
+// New Routes \\
+// Bills
 app.get('/bills/new', (req, res) => {
     res.render('bills/New')
 });
 
-app.get('bills/:month/new', (req, res) => {
+app.get('/bills/:month/new', (req, res) => {
     res.render('bills/Month')
 });
 
-// Delete Route \\
+// Wish List
+app.get('/wishlist/new', (req, res) => {
+    res.render('wishlist/New')
+});
+
+app.get('/wishlist/:month/new', (req, res) => {
+    res.render('wishlist/Month')
+});
+
+// Delete Routes \\
+// Bills
 app.delete('/bills/:id', (req, res) => {
     const { id } = req.params;
     Bills.findByIdAndDelete(id)
@@ -76,7 +87,20 @@ app.delete('/bills/:id', (req, res) => {
         })
 });
 
-// Update Route \\
+// Wish List
+app.delete('/wishlist/:id', (req, res) => {
+    const { id } = req.params;
+    Wishlist.findByIdAndDelete(id)
+        .then(() => {
+            res.redirect('/wishlist');
+        })
+        .catch((err) => {
+            res.status(400).json({ err });
+        })
+});
+
+// Update Routes \\
+// Bills
 app.put('/bills/:id', (req, res) => {
     const { id } = req.params;
     req.body.billPaid = req.body.billPaid === 'on' ? true : false;
@@ -89,7 +113,21 @@ app.put('/bills/:id', (req, res) => {
         })
 });
 
-// Create Route \\
+// Wish List
+app.put('/wishlist/:id', (req, res) => {
+    const { id } = req.params;
+    req.body.mustHave = req.body.mustHave === 'on' ? true : false;
+    Wishlist.findByIdAndUpdate(id, req.body, { new: true })
+        .then((updatedItem) => {
+            res.redirect(`/wishlist/${updatedItem.month}`);
+        })
+        .catch((err) => {
+            res.status(400).json({ err });
+        })
+});
+
+// Create Routes \\
+// Bills
 app.post('/bills/', (req, res) => {
     req.body.billPaid = req.body.billPaid === 'on' ? true : false;
     Bills.create(req.body)
@@ -101,7 +139,20 @@ app.post('/bills/', (req, res) => {
         })
 });
 
-// Edit Route \\
+// Wish List
+app.post('/wishlist/', (req, res) => {
+    req.body.mustHave = req.body.mustHave === 'on' ? true : false;
+    Wishlist.create(req.body)
+        .then((createdItem) => {
+            res.redirect(`/wishlist/${createdItem.month}`);
+        })
+        .catch((err) => {
+            res.status(400).json({ err });
+        })
+});
+
+// Edit Routes \\
+// Bills
 app.get('/bills/:id/edit', (req, res) => {
     const { id } = req.params;
     Bills.findById(id)
@@ -113,7 +164,20 @@ app.get('/bills/:id/edit', (req, res) => {
         })
 });
 
+// Wish List
+app.get('/wishlist/:id/edit', (req, res) => {
+    const { id } = req.params;
+    Wishlist.findById(id)
+        .then((wishlist) => {
+            res.render('wishlist/Edit', { wishlist });
+        })
+        .catch((err) => {
+            res.status(400).json({ err });
+        })
+});
+
 // Show Routes \\
+// Bills
 app.get('/bills/expense/:id', (req, res) => {
     const { id } = req.params;
     Bills.findById({ id })
@@ -129,8 +193,30 @@ app.get('/bills/:month', (req, res) => {
     const { month } = req.params;
     Bills.find({ month: month })
         .then((bills) => {
-            console.log(bills)
             res.render('bills/Month', { bills, month });
+        })
+        .catch((err) => {
+            res.status(400).json({ err });
+        })
+});
+
+// Wish List
+app.get('/wishlist/expense/:id', (req, res) => {
+    const { id } = req.params;
+    Wishlist.findById({ id })
+        .then((wishlist) => {
+            res.render('wishlist/Show', { wishlist });
+        })
+        .catch((err) => {
+            res.status(400).json({ err });
+        })
+});
+
+app.get('/wishlist/:month', (req, res) => {
+    const { month } = req.params;
+    Wishlist.find({ month: month })
+        .then((wishlist) => {
+            res.render('wishlist/Month', { wishlist, month });
         })
         .catch((err) => {
             res.status(400).json({ err });
