@@ -11,18 +11,6 @@ class Index extends React.Component {
                     <hr/>
                     <a href="/wishlist">View Monthly Wish List Items</a>
                 </nav>
-                {/* <ol>
-                    {
-                        months.map((month, i) => { 
-                            return(
-                                <li>
-                                    {month}<br/>
-                                    <a href={`/wishlist/${month}`}>View Wish List</a>
-                                </li>
-                            )
-                        })
-                    }
-                </ol> */}
             </Default>
         )
     }

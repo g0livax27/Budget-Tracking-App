@@ -21,6 +21,7 @@ class Index extends React.Component {
             <Default>
                 <h1>Track Your Wish List</h1>
                 <nav>
+                    <a href="/">Back to Main</a><br/>
                     <a href="/wishlist/new">Enter Wish List Items</a>
                 </nav>
                 <ol>
