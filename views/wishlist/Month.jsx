@@ -9,8 +9,7 @@ class Month extends React.Component {
             <Default>
                 <h1>{month}'s Wish List</h1>
                 <a href="/wishlist">Back</a><br/><br/>
-                <a href="/wishlist/new">Add a Wish List Item</a><br/>
-                <h2>Items:</h2>
+                <a href="/wishlist/new">Add a Wish List Item</a><br/><br/>
                     <table class="table table-striped table-dark">
                         <thead>
                             <tr>

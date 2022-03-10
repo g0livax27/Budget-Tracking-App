@@ -9,8 +9,7 @@ class Month extends React.Component {
             <Default>
                 <h1>{month}'s Expenses</h1>
                 <a href="/bills">Back</a><br/><br/>
-                <a href="/bills/new">Add a Bill to this Month</a><br/>
-                <h2>Bills:</h2>
+                <a href="/bills/new">Add a Bill to this Month</a><br/><br/>
                     <table class="table table-striped table-dark">
                         <thead>
                             <tr>

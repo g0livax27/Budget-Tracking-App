@@ -19,7 +19,7 @@ class Index extends React.Component {
         ];
         return(
             <Default>
-                <h1>Track Your Wish List</h1>
+                <h1>Track Your Wish Lists</h1>
                 <nav>
                     <a href="/">Back to Main</a><br/>
                     <a href="/wishlist/new">Enter Wish List Items</a>
