@@ -75,11 +75,12 @@ input[type=text] {
   padding: .3em
 }
 
-input[type=submit] {
+input[type=submit], button {
   padding: .3em;
-  color: blue;
+  color: black;
   background: goldenrod;
   font-size: 1em;
+  font-family: 'Handlee';
   border-radius: 10%
 }
 

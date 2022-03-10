@@ -7,9 +7,9 @@ class Index extends React.Component {
             <Default>
                 <h1>Budget Tracking</h1>
                 <nav>
-                    <a href="/bills">View Monthly Bills</a><br/>
+                    <a href="/bills"><button>View Monthly Bills</button></a><br/>
                     <hr/>
-                    <a href="/wishlist">View Monthly Wish Lists</a>
+                    <a href="/wishlist"><button>View Monthly Wish Lists</button></a>
                 </nav>
             </Default>
         )
