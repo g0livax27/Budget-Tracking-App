@@ -19,10 +19,10 @@ class Index extends React.Component {
         ];
         return(
             <Default>
-                <h1>Track Your Finances</h1>
+                <h1>Track Your Monthly Finances</h1>
                 <nav>
                     <a href="/">Back to Main</a><br/>
-                    <a href="/bills/new">Enter a Monthly Expense</a>
+                    <a href="/bills/new">Enter an Expense</a>
                 </nav>
 
                 <ol>

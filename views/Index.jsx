@@ -5,7 +5,7 @@ class Index extends React.Component {
     render() {
         return(
             <Default>
-                <h1>Track Your Spending</h1>
+                <h1>Budget Tracking</h1>
                 <nav>
                     <a href="/bills">View Monthly Bills</a><br/>
                     <hr/>

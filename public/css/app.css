@@ -25,8 +25,8 @@ h1 {
   margin-bottom: .5em;
   padding: 1em;
   text-align: center;
-  text-shadow: 1px 1px 1px green;
-  color: goldenrod;
+  text-shadow: 1px 1px 1px goldenrod;
+  color: blue;
   background: rgba(221, 213, 213, 0.40)
 }
 
@@ -58,7 +58,7 @@ a {
 }
 
 a:hover {
-  color: goldenrod;
+  color: blue;
 }
 
 li {
@@ -67,7 +67,7 @@ li {
 }
 
 li a {
-  color: green;
+  color: goldenrod;
   background: rgba(221, 213, 213, 0.40)
 }
 
@@ -77,7 +77,7 @@ input[type=text] {
 
 input[type=submit] {
   padding: .3em;
-  color: black;
+  color: blue;
   background: goldenrod;
   font-size: 1em;
   border-radius: 10%
@@ -88,5 +88,7 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-  text-align: center
+  text-align: center;
+  color: goldenrod;
+  text-shadow: 1px 1px 1px darkblue;
 }
