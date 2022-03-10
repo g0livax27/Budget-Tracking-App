@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa|Righteous');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 
 body {
   background: url(https://img.freepik.com/free-vector/paper-style-luxury-background_23-2148982497.jpg?size=626&ext=jpg);
@@ -7,7 +7,7 @@ body {
   background-position: relative;
   height: 100vh;
   margin: 0;
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Handlee';
   color: black
 }
 
@@ -15,25 +15,19 @@ div {
   background:rgba(221, 213, 213, 0.40);
   margin:0;
   margin-bottom: .5em;
-  padding: 1em;
-  text-align: center;
+  padding: 1em
 }
 
 h1 {
-  font-family: 'Righteous', cursive;
+  font-family: 'Handlee';
   background: antiquewhite;
   margin:0;
   margin-bottom: .5em;
   padding: 1em;
   text-align: center;
   text-shadow: 1px 1px 1px green;
-  text-decoration: wavy underline black;
   color: goldenrod;
   background: rgba(221, 213, 213, 0.40)
-}
-
-table {
-  position: center
 }
 
 nav {
