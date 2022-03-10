@@ -27,8 +27,8 @@ router.get('/:month/new', (req, res) => {
 router.delete('/:id', (req, res) => {
     const { id } = req.params;
     Wishlist.findByIdAndDelete(id)
-        .then(() => {
-            res.redirect('/wishlist');
+        .then((deletedItem) => {
+            res.redirect(`/wishlist/${deletedItem.month}`);
         })
         .catch((err) => {
             res.status(400).json({ err });
