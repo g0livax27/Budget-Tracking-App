@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 
 // New Routes \\
 router.get('/new', (req, res) => {
-    res.render('New')
+    res.render('wishlist/New')
 });
 
 router.get('/:month/new', (req, res) => {
