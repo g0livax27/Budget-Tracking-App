@@ -27,8 +27,8 @@ router.get('/:month/new', (req, res) => {
 router.delete('/:id', (req, res) => {
     const { id } = req.params;
     Bills.findByIdAndDelete(id)
-        .then(() => {
-            res.redirect('/bills');
+        .then((deletedBill) => {
+            res.redirect(`/bills/${deletedBill.month}`);
         })
         .catch((err) => {
             res.status(400).json({ err });
