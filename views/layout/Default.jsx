@@ -11,7 +11,6 @@ class DefaultLayout extends React.Component {
                     {this.props.children}
                     <footer>
                         <p>created by Gerimae O.</p>
-                        <a href=""></a>
                     </footer>
                 </body>
             </html>
