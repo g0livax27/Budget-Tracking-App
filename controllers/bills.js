@@ -1,7 +1,18 @@
 // Dependencies \\
 const express = require('express');
-const router = express.Router();
 const Bills = require('../models/bill.js');
+
+// Create Route \\
+const router = express.Router();
+
+// Middleware \\
+router.use((req, res, next) => {
+    if(req.session.loggedIn) {
+        next();
+    } else {
+        res.redirect('/user/login');
+    }
+});
 
 // Index Route \\
 router.get('/', (req, res) => {

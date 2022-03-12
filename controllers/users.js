@@ -1,7 +1,7 @@
 // Dependencies \\
 const express = require('express');
-const User = require('../models/user.js');
 const bcrypt = require('bcryptjs');
+const User = require('../models/user.js');
 
 // Create Route \\
 const router = express.Router();
