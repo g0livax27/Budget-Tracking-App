@@ -6,7 +6,8 @@ const billSchema = new mongoose.Schema(
     month: String,
     billAmount: String,
     billName: String,
-    billPaid: Boolean
+    billPaid: Boolean,
+    username: String
     }
 );
 
