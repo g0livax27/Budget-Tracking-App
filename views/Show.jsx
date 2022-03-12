@@ -14,7 +14,7 @@ class Show extends React.Component {
                         <hr/>
                     </nav>
                 </header>
-                <a href="/bills"><button class="show">View Monthly Bills</button></a>
+                <a href="/bills"><button>View Monthly Bills</button></a>
                 <a href="/wishlist"><button class="show">View Monthly Wish Lists</button></a>
             </Default>
         )

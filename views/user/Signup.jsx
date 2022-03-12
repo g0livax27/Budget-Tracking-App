@@ -6,7 +6,7 @@ class Signup extends React.Component {
         return (
             <Default>
                 <div>
-                    <form action="/user/signup" method="POST">
+                    <form class="signup" action="/user/signup" method="POST">
                         <fieldset>
                             <legend>
                                 New User

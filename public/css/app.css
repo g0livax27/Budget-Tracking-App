@@ -18,6 +18,10 @@ div {
   padding: 1em
 }
 
+header {
+  background: rgba(221, 213, 213, 0.40)
+}
+
 h1 {
   font-family: 'Abel';
   background: antiquewhite;
@@ -30,20 +34,25 @@ h1 {
   background: rgba(221, 213, 213, 0.40)
 }
 
-header {
-  background: rgba(221, 213, 213, 0.40)
-}
-
 nav {
-  text-align: center;
-  margin: 2% 0
-}
-
-.show {
-  text-align: left
+  text-align: center
 }
 
 .login {
+  background: rgba(221, 213, 213, 0.40);
+  position: fixed
+}
+
+.signup {
+  background: rgba(221, 213, 213, 0.40);
+  position: fixed
+}
+
+.expense {
+  text-align: center
+}
+
+.new {
   background: rgba(221, 213, 213, 0.40);
   position: fixed
 }
@@ -53,21 +62,12 @@ nav {
   position: fixed
 }
 
-.new {
-  background: rgba(221, 213, 213, 0.40);
-  position: fixed
-}
-
-.expense {
-  text-align: center
+.show {
+  text-align: left
 }
 
 button {
   font-size: 1em
-}
-
-.show {
-  margin: 2% 0
 }
 
 table {
