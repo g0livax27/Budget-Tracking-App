@@ -5,8 +5,13 @@ class Index extends React.Component {
     render() {
         return(
             <Default>
-                <a href="/user/signup"><button>Signup</button></a>
-                <a href="/user/login"><button>Login</button></a>
+                <h1>
+                    Follow Your Money
+                </h1>
+                <nav>
+                    <a href="/user/signup"><button>Signup</button></a>
+                    <a href="/user/login"><button>Login</button></a>
+                </nav>
             </Default>
         )
     }

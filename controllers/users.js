@@ -49,8 +49,27 @@ router.get('/login', async (req, res) => {
         })
 });
 
-router.post('/login', (req, res) => {
-    res.send('login')
+router.post('/login', async (req, res) => {
+    const { username, password } = req.body;
+    User.findOne({ username })
+        .then(async (user) => {
+            if(user){
+                const result = await bcrypt.compare(password, user.password);
+                if(result){
+                    req.session.username = username;
+                    req.session.loggedIn = true;
+                    res.redirect('/bills');
+                } else {
+                    res.json({ error: "Password Does Not Match"});
+                }
+            } else {
+                res.json({ error: "User Does Not Exist"});
+            }
+        })
+        .catch((err) => {
+            console.log(err)
+            res.json({ err });
+        })
 });
 
 module.exports = router;
