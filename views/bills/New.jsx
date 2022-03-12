@@ -6,9 +6,7 @@ class New extends React.Component {
         return(
         <Default>
             <h1>Enter a New Expense to Track Below:</h1>
-            <nav>
                 <a href="/bills">Back to Monthly Tracker</a>
-            </nav>
             <form action="/bills" method="POST">
                 Month: <input name="month" type="text"/><br/>
                 Name of Bill: <input name="billName" type="text"/>
