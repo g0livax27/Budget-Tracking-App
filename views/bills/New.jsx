@@ -10,7 +10,7 @@ class New extends React.Component {
             <form class="new" action="/bills" method="POST">
                 <fieldset>
                     Month: <input name="month" type="text"/><br/>
-                    Name of Bill: <input name="billName" type="text"/>
+                    Name of Bill: <input name="billName" type="text"/><br/>
                     Bill Amount: <input name="billAmount" type="text"/><br/>
                     Is Bill Paid?: <input name="billPaid" type="checkbox"/><br/>
                     <input type="submit" value="Enter Expense"/>

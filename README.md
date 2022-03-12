@@ -17,5 +17,5 @@ You can add your expenses and wish list items for each month of the year. Keep t
 * HTML, CSS, JavaScript
 * NodeJS, Express, REACT
 * MongoDB, Heroku
-* Visual Studio Code
+* VS Code
 * [Diagrams.net](diagrams.net)
