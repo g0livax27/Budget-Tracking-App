@@ -4,6 +4,7 @@ const express = require('express');
 const morgan = require("morgan");
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
+const UserRouter = require('./controllers/user');
 
 // Database Connection \\
 const DATABASE_URL = process.env.DATABASE_URL;
@@ -32,15 +33,17 @@ app.use((req, res, next) => {
 });
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
+
+// Routes \\
 app.use('/bills', bills);
 app.use('/wishlist', wishlist);
+app.use('/user', UserRouter);
+app.get('/', (req, res) => {
+    res.render('Index')
+});
 
 // Server Listener \\
 const PORT = process.env.PORT;
 app.listen(PORT, () => {
     console.log(`eavesdropping on Port ${PORT}`)
-});
-
-app.get('/', (req, res) => {
-    res.render('Index')
 });
