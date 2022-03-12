@@ -1,6 +1,6 @@
 # Follow the Money :money_with_wings:
 
-![FTM Homepage](public/assets/FTM-hompage.png)
+![FTM Homepage](public/assets/FTM-homepage.png)
 
 A budget-tracking app to manage your bills and wish list items.
 
