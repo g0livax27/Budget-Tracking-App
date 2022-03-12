@@ -5,6 +5,8 @@ const morgan = require("morgan");
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
 const UserRouter = require('./controllers/users');
+const session = require('express-session');
+const MongoStore = require('connect-mongo');
 
 // Database Connection \\
 const DATABASE_URL = process.env.DATABASE_URL;
@@ -33,6 +35,15 @@ app.use((req, res, next) => {
 });
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
+
+app.use(
+    session({
+        secret: process.env.SECRET,
+        store: MongoStore.create({ mongoUrl: process.env.DATABASE_URL }),
+        saveUninitialized: true,
+        resave: false
+    })
+);
 
 // Routes \\
 app.use('/bills', bills);
