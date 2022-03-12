@@ -26,7 +26,7 @@ h1 {
   padding: 1em;
   text-align: center;
   text-shadow: 1px 1px 1px goldenrod;
-  color: blue;
+  color: darkgreen;
   background: rgba(221, 213, 213, 0.40)
 }
 
@@ -58,7 +58,7 @@ a {
 }
 
 a:hover {
-  color: blue;
+  color: darkgreen;
 }
 
 li {
@@ -91,5 +91,5 @@ footer {
   right: 0;
   text-align: center;
   color: goldenrod;
-  text-shadow: 1px 1px 1px darkblue;
+  text-shadow: 1px 1px 1px darkgreen;
 }

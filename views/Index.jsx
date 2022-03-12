@@ -7,6 +7,7 @@ class Index extends React.Component {
             <Default>
                 <h1>
                     Follow Your Money
+                    
                 </h1>
                 <nav>
                     <a href="/user/signup"><button>Signup</button></a>

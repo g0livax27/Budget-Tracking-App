@@ -4,18 +4,18 @@ const Default = require('../layout/Default.jsx');
 class Index extends React.Component {
     render() {
         const months = [
-            'January',
-            'February',
-            'March',
-            'April',
-            'May',
-            'June',
-            'July',
-            'August',
-            'September',
-            'October',
-            'November',
-            'December'
+            'JANUARY',
+            'FEBRUARY',
+            'MARCH',
+            'APRIL',
+            'MAY',
+            'JUNE',
+            'JULY',
+            'AUGUST',
+            'SEPTEMBER',
+            'OCTOBER',
+            'NOVEMBER',
+            'DECEMBER'
         ];
         return(
             <Default>
