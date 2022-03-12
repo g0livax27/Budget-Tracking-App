@@ -63,6 +63,7 @@ router.put('/:id', (req, res) => {
 // Create Route \\
 router.post('/', (req, res) => {
     req.body.mustHave = req.body.mustHave === 'on' ? true : false;
+    req.body.username = req.session.username;
     Wishlist.create(req.body)
         .then((createdItem) => {
             res.redirect(`/wishlist/${createdItem.month}`);

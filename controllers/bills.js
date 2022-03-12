@@ -63,6 +63,7 @@ router.put('/:id', (req, res) => {
 // Create Route \\
 router.post('/', (req, res) => {
     req.body.billPaid = req.body.billPaid === 'on' ? true : false;
+    req.body.username = req.session.username;
     Bills.create(req.body)
         .then((createdBill) => {
             res.redirect(`/bills/${createdBill.month}`);
