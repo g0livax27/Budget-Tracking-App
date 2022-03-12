@@ -4,7 +4,7 @@ const express = require('express');
 const morgan = require("morgan");
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
-const UserRouter = require('./controllers/user');
+const UserRouter = require('./controllers/users');
 
 // Database Connection \\
 const DATABASE_URL = process.env.DATABASE_URL;

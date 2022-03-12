@@ -1,7 +1,8 @@
 // Model Code \\
-const mongoose = require('./connection');
+const mongoose = require('mongoose');
+const {Schema, model} = mongoose;
 
-const { userSchema, model} = new mongoose.Schema({
+const userSchema = new Schema({
     username: {
         type: String,
         required: true,
