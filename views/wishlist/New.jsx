@@ -6,9 +6,7 @@ class New extends React.Component {
         return(
         <Default>
             <h1>Enter a New Wish List Item Below:</h1>
-            <nav>
-                <a href="/wishlist">Back to Monthly Wish List</a>
-            </nav>
+            <a href="/wishlist">Back to Monthly Wish List</a><br/><br/>
             <form action="/wishlist" method="POST">
                 Month: <input name="month" type="text"/><br/>
                 Wish List Item: <input name="itemName" type="text"/>
