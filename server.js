@@ -52,6 +52,9 @@ app.use('/user', UserRouter);
 app.get('/', (req, res) => {
     res.render('Index')
 });
+app.get('/expenses', (req, res) => {
+    res.render('Show')
+});
 
 // Server Listener \\
 const PORT = process.env.PORT;

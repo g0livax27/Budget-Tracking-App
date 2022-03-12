@@ -1,7 +1,7 @@
 const React = require('react');
 const Default = require('./layout/Default.jsx');
 
-class Index extends React.Component {
+class Show extends React.Component {
     render() {
         return(
             <Default>
@@ -10,7 +10,6 @@ class Index extends React.Component {
                     <a href="/bills"><button>View Monthly Bills</button></a><br/>
                     <hr/>
                     <a href="/wishlist"><button>View Monthly Wish Lists</button></a><br/><br/>
-                    <hr/>
                     <a href="/user/logout"><button>Logout</button></a>
                 </nav>
             </Default>
@@ -18,4 +17,4 @@ class Index extends React.Component {
     }
 };
 
-module.exports = Index;
+module.exports = Show;

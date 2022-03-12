@@ -1,5 +1,4 @@
 const React = require('react');
-
 const Default = require('../layout/Default.jsx');
 
 class Show extends React.Component {

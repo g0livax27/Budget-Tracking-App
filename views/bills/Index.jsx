@@ -21,7 +21,7 @@ class Index extends React.Component {
             <Default>
                 <h1>Track Your Monthly Finances</h1>
                 <nav>
-                    <a href="/"><button>Back to Main</button></a><br/>
+                    <a href="/expenses"><button>Back to Main</button></a><br/>
                     <a href="/bills/new"><button>Enter an Expense</button></a><br/><br/>
                     <hr/>
                     <a href="/user/logout"><button>Logout</button></a>
