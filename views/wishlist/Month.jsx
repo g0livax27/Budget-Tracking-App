@@ -26,7 +26,7 @@ class Month extends React.Component {
                                     return(
                                         <tr>
                                             <td>{month.itemName}</td>
-                                            <td>{month.itemAmount}</td>
+                                            <td>${month.itemAmount}</td>
                                             <td>{month.mustHave ? 'Absolutely Need!' : 'No, I can do without'}</td>
                                             <td><a href={`/wishlist/${month._id}/edit`}>Edit</a></td>
                                             <td><form action={`/wishlist/${month._id}?_method=DELETE`} method="POST">

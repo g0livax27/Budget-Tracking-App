@@ -26,7 +26,7 @@ class Month extends React.Component {
                                     return(
                                         <tr>
                                             <td>{month.billName}</td>
-                                            <td>{month.billAmount}</td>
+                                            <td>${month.billAmount}</td>
                                             <td>{month.billPaid ? 'Paid in Full' : 'No, Still Need to Pay'}</td>
                                             <td><a href={`/bills/${month._id}/edit`}>Edit</a></td>
                                             <td><form action={`/bills/${month._id}?_method=DELETE`} method="POST">

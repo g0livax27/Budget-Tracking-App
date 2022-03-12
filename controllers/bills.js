@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Bills = require('../models/bills.js');
+const Bills = require('../models/bill.js');
 
 // Index Route \\
 router.get('/', (req, res) => {

@@ -17,7 +17,7 @@ mongoose.connect(DATABASE_URL, CONFIG);
 
 // Controllers \\
 const bills = require('./controllers/bills.js');
-const wishlist = require('./controllers/wishlist.js')
+const wishlist = require('./controllers/wishlists.js')
 
 // Express App Object \\
 const app = express();
