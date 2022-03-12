@@ -8,8 +8,11 @@ You can add your expenses and wish list items for each month of the year. Keep t
 
 [Signup](https://gerimae-oliva-budget-tracking.herokuapp.com/) today!
 
+![FTM Signup Page](public/assets/FTM-new-user.png)
+
 ## Getting Started
 Login to your account, or signup with us, and start adding your monthly bills, expenses and/or wish list items
+![FTM User Login Page](public/assets/FTM-user-login.png)
 
 ## Next Steps
 
