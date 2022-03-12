@@ -9,7 +9,9 @@ class Index extends React.Component {
                 <nav>
                     <a href="/bills"><button>View Monthly Bills</button></a><br/>
                     <hr/>
-                    <a href="/wishlist"><button>View Monthly Wish Lists</button></a>
+                    <a href="/wishlist"><button>View Monthly Wish Lists</button></a><br/><br/>
+                    <hr/>
+                    <a href="/user/logout"><button>Logout</button></a>
                 </nav>
             </Default>
         )
