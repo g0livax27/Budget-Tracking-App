@@ -19,13 +19,15 @@ class Index extends React.Component {
         ];
         return(
             <Default>
-                <h1>Track Your Wish Lists</h1>
-                <nav>
-                    <a href="/expenses"><button>Back to Main</button></a><br/>
-                    <a href="/wishlist/new"><button>Enter Wish List Items</button></a><br/><br/>
-                    <hr/>
-                    <a href="/user/logout"><button>Logout</button></a>
-                </nav>
+                <header>
+                    <h1>Track Your Wish Lists</h1>
+                    <nav>
+                        <a href="/expenses">Home - </a>
+                        <a href="/user/logout">Logout - </a>
+                        <a href="/wishlist/new">Enter Wish List Items</a><br/><br/>
+                        <hr/>
+                    </nav>
+                </header>
                 <ol>
                     {
                         months.map((month, i) => { 

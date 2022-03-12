@@ -12,11 +12,11 @@ class Signup extends React.Component {
                                 New User
                             </legend>
                             <label>
-                                USERNAME: <input type="text" name="username" required/>
+                                Username: <input type="text" name="username" required/>
                             </label>
                             <br/>
                             <label>
-                                PASSWORD: <input type="password" name="password" required/>
+                                Password: <input type="password" name="password" required/>
                             </label>
                             <br/>
                             <input type="submit" value="Create Account"/>

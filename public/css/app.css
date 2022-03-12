@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
 body {
   background: url(https://img.freepik.com/free-vector/paper-style-luxury-background_23-2148982497.jpg?size=626&ext=jpg);
@@ -7,7 +7,7 @@ body {
   background-position: relative;
   height: 100vh;
   margin: 0;
-  font-family: 'Handlee';
+  font-family: 'Abel';
   color: black
 }
 
@@ -19,7 +19,7 @@ div {
 }
 
 h1 {
-  font-family: 'Handlee';
+  font-family: 'Abel';
   background: antiquewhite;
   margin:0;
   margin-bottom: .5em;
@@ -30,12 +30,44 @@ h1 {
   background: rgba(221, 213, 213, 0.40)
 }
 
+header {
+  background: rgba(221, 213, 213, 0.40)
+}
+
 nav {
+  text-align: center;
+  margin: 2% 0
+}
+
+.show {
+  text-align: left
+}
+
+.login {
+  background: rgba(221, 213, 213, 0.40);
+  position: fixed
+}
+
+.edit {
+  background: rgba(221, 213, 213, 0.40);
+  position: fixed
+}
+
+.new {
+  background: rgba(221, 213, 213, 0.40);
+  position: fixed
+}
+
+.expense {
   text-align: center
 }
 
-form {
-  background: rgba(0, 0, 0, 0.60)
+button {
+  font-size: 1em
+}
+
+.show {
+  margin: 2% 0
 }
 
 table {
@@ -59,6 +91,7 @@ a {
   text-decoration: none;
   text-shadow: 1px 1px 1px black;
   font-size: 1em;
+  display: inline
 }
 
 a:hover {
@@ -82,11 +115,11 @@ input[type=text] {
 }
 
 input[type=submit], button {
-  padding: .3em;
+  padding: .2em;
   color: black;
   background: goldenrod;
   font-size: 1em;
-  font-family: 'Handlee';
+  font-family: 'Abel';
   border-radius: 10%
 }
 

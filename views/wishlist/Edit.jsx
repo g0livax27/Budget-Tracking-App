@@ -6,7 +6,7 @@ class Edit extends React.Component {
         const { wishlist } = this.props;
         return(
             <Default>
-                <form action={`/wishlist/${wishlist._id}?_method=PUT`} method="POST">
+                <form class="edit" action={`/wishlist/${wishlist._id}?_method=PUT`} method="POST">
                     <fieldset>
                         <legend>{`Edit ${wishlist.itemName}`}</legend>
                         <label>
@@ -28,7 +28,7 @@ class Edit extends React.Component {
                         </label>
                     </fieldset>
                     <input type="submit" value="Submit Change"/><br/>
-                    <a href="/bills">Back to Main</a>
+                    <a href="/wishlist">Back to Main</a>
                 </form>
             </Default>
         )

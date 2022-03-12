@@ -7,7 +7,7 @@ class New extends React.Component {
         <Default>
             <h1>Enter a New Wish List Item Below:</h1>
             <a href="/wishlist">Back to Monthly Wish List</a><br/><br/>
-            <form action="/wishlist" method="POST">
+            <form class="new" action="/wishlist" method="POST">
                 Month: <input name="month" type="text"/><br/>
                 Wish List Item: <input name="itemName" type="text"/>
                 Wish List Item Amount: <input name="itemAmount" type="text"/><br/>

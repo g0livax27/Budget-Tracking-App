@@ -6,7 +6,7 @@ class Edit extends React.Component {
         const { bills } = this.props;
         return(
             <Default>
-                <form action={`/bills/${bills._id}?_method=PUT`} method="POST">
+                <form class="edit" action={`/bills/${bills._id}?_method=PUT`} method="POST">
                     <fieldset>
                         <legend>{`Edit ${bills.billName}`}</legend>
                         <label>
@@ -28,7 +28,7 @@ class Edit extends React.Component {
                         </label>
                     </fieldset>
                     <input type="submit" value="Submit Change"/><br/>
-                    <a href="/bills">Back to Main</a>
+                    <a href="/bills">Back to Monthly Finances</a>
                 </form>
             </Default>
         )

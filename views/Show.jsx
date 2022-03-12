@@ -5,13 +5,17 @@ class Show extends React.Component {
     render() {
         return(
             <Default>
-                <h1>Where's Your Money?</h1>
-                <nav>
-                    <a href="/bills"><button>View Monthly Bills</button></a><br/>
-                    <hr/>
-                    <a href="/wishlist"><button>View Monthly Wish Lists</button></a><br/><br/>
-                    <a href="/user/logout"><button>Logout</button></a>
-                </nav>
+                <header>
+                    <h1>
+                        Follow the Money
+                    </h1>
+                    <nav class="show">
+                        <a href="/user/logout">Logout</a>
+                        <hr/>
+                    </nav>
+                </header>
+                <a href="/bills"><button class="show">View Monthly Bills</button></a>
+                <a href="/wishlist"><button class="show">View Monthly Wish Lists</button></a>
             </Default>
         )
     }

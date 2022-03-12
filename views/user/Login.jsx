@@ -5,7 +5,7 @@ class Login extends React.Component{
     render(){
         return(
             <Default>
-                <form action="/user/login" method="POST">
+                <form class="login" action="/user/login" method="POST">
                     <fieldset>
                         <legend>
                             User Login
