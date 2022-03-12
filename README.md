@@ -1,5 +1,7 @@
 # Follow the Money :money_with_wings:
 
+![FTM Homepage](public/assets/FTM-hompage.png)
+
 A budget-tracking app to manage your bills and wish list items.
 
 You can add your expenses and wish list items for each month of the year. Keep track of your spending habits, and see where your money is going every month.
@@ -10,6 +12,7 @@ You can add your expenses and wish list items for each month of the year. Keep t
 Login to your account, or signup with us, and start adding your monthly bills, expenses and/or wish list items
 
 ## Next Steps
+
 
 ## Features
 * Signup/Login authentication for individual users to manage their own monthly expenses and/or wish list items
