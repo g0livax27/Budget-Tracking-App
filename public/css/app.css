@@ -11,13 +11,6 @@ body {
   color: black
 }
 
-div {
-  background:rgba(221, 213, 213, 0.40);
-  margin:0;
-  margin-bottom: .5em;
-  padding: 1em
-}
-
 header {
   background: rgba(221, 213, 213, 0.40)
 }
@@ -36,6 +29,13 @@ h1 {
 
 nav {
   text-align: center
+}
+
+div {
+  background:rgba(221, 213, 213, 0.40);
+  margin:0;
+  margin-bottom: .5em;
+  padding: 1em
 }
 
 .login {
