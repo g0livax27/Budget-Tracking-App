@@ -99,7 +99,7 @@ router.get('/expense/:id', (req, res) => {
 
 router.get('/:month', (req, res) => {
     const { month } = req.params;
-    Wishlist.find({ month: month })
+    Wishlist.find({ month: month, username: req.session.username })
         .then((wishlist) => {
             res.render('wishlist/Month', { wishlist, month });
         })

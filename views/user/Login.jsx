@@ -4,7 +4,7 @@ const Default = require('../layout/Default.jsx');
 class Login extends React.Component{
     render(){
         return(
-            <div>
+            <Default>
                 <form action="/user/login" method="POST">
                     <fieldset>
                         <legend>
@@ -21,7 +21,7 @@ class Login extends React.Component{
                         <input type="submit" value="Login"/>
                     </fieldset>
                 </form>
-            </div>
+            </Default>
         )
     }
 };

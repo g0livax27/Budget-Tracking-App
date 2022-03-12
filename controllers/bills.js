@@ -18,8 +18,8 @@ router.use((req, res, next) => {
 router.get('/', (req, res) => {
     const { months } = req.params;
     Bills.find({ months, username: req.session.username })
-        .then((months) => {
-            res.render('bills/Index', { months });
+        .then((foundMonths) => {
+            res.render('bills/Index', { foundMonths });
         })
         .catch((err) => {
             res.status(400).json({ err });
@@ -99,7 +99,7 @@ router.get('/expense/:id', (req, res) => {
 
 router.get('/:month', (req, res) => {
     const { month } = req.params;
-    Bills.find({ month: month })
+    Bills.find({ month: month, username: req.session.username })
         .then((bills) => {
             res.render('bills/Month', { bills, month });
         })
