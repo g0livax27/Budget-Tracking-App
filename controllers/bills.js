@@ -17,7 +17,7 @@ router.use((req, res, next) => {
 // Index Route \\
 router.get('/', (req, res) => {
     const { months } = req.params;
-    Bills.find({ months })
+    Bills.find({ months, username: req.session.username })
         .then((months) => {
             res.render('bills/Index', { months });
         })

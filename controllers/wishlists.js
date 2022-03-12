@@ -17,7 +17,7 @@ router.use((req, res, next) => {
 // Index Route \\
 router.get('/', (req, res) => {
     const { months } = req.params;
-    Wishlist.find({ months })
+    Wishlist.find({ months, username: req.session.username })
         .then((months) => {
             res.render('wishlist/Index', { months });
         })
