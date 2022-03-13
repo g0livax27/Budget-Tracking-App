@@ -10,15 +10,15 @@ You can add your expenses and wish list items for each month of the year. Keep t
 
 ![FTM Signup Page](public/assets/FTM-new-user.png)
 
-## Getting Started
+## Getting Started:
 Login to your account, or signup with us, and start adding your monthly bills, expenses and/or wish list items
 
 ![FTM User Login Page](public/assets/FTM-user-login.png)
 
-## Next Steps
+## Next Steps:
 
 
-## Features
+## Features:
 * Signup/Login authentication for individual users to manage their own monthly expenses and/or wish list items
 * Create a new expense or wish list item for each month
 * Edit any expense or wish list item

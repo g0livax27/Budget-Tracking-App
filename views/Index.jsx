@@ -11,7 +11,7 @@ class Index extends React.Component {
                     </h1>
                     <nav>
                         <a href="/user/login"><button>Login</button></a>
-                        <a href="/user/signup"><button>Signup</button></a>
+                        <a href="/user/signup"><button>Sign Up</button></a>
                     </nav>
                 </header>
             </Default>
