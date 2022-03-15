@@ -16,9 +16,6 @@ Login to your account, or signup, and start adding your monthly bills, expenses 
 ![FTM User Login Page](public/assets/FTM-user-login.png)
 
 ## Next Steps:
-
-
-## Features:
 * Signup/Login authentication for individual users to manage their own monthly expenses and/or wish list items
 * Create a new expense or wish list item for each month
 * Edit any expense or wish list item
@@ -30,5 +27,5 @@ Login to your account, or signup, and start adding your monthly bills, expenses 
 * NodeJS, Express, REACT
 * MongoDB, Heroku
 * VS Code
-* [GitHub](https://github.com/g0livax27/Budget-Tracking-App/projects) for ERD
+* [GitHub](https://github.com/g0livax27/Budget-Tracking-App/projects) for trello board
 * [Diagrams.net](diagrams.net) for wireframes
