@@ -30,4 +30,5 @@ Login to your account, or signup, and start adding your monthly bills, expenses 
 * NodeJS, Express, REACT
 * MongoDB, Heroku
 * VS Code
-* [Diagrams.net](diagrams.net)
+* [GitHub](https://github.com/g0livax27/Budget-Tracking-App/projects) for ERD
+* [Diagrams.net](diagrams.net) for wireframes
